@@ -1,0 +1,16 @@
+<div class="container text-white">
+  <h1>Rate my cakes</h1>
+  <div class="row">
+    <div class="col-6 border-right">
+      <app-cake-new [cakes]='allCakes'></app-cake-new>
+    </div>
+    <div class="col-6 scale">
+      <app-cake-index [cakes]='allCakes' (showOneEvent)="showOneEvent($event)"></app-cake-index>
+    </div>
+  </div>
+  <div *ngIf="cake" class="row">
+    <div class="container">
+      <app-cake-show [cake]="cake"></app-cake-show>
+    </div>
+  </div>
+</div>

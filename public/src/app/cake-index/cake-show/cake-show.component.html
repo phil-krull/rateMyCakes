@@ -1,0 +1,12 @@
+<div class="row" *ngIf="cake">
+  <div class="col" style="max-height: 350px;">
+    <img [src]="cake.image" class="d-flex mr-3 img-thumbnail w-75 h-75" alt="{{ cake.bakerName }}">
+  </div>
+  <div class="col">
+    <h2>Average rating: {{ cake.ratings | rating }} stars</h2>
+    <div *ngFor="let rating of cake.ratings">
+      <p>{{ rating.comment }}</p>
+      <p>{{ rating.rating }} stars</p>
+    </div>
+  </div>
+</div>

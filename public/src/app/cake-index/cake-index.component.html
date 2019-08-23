@@ -1,0 +1,7 @@
+<div *ngFor="let c of allCakes" class="media mb-2">
+  <img (click)="showOne(c)" class="d-flex mr-3 img-thumbnail w-25 h-25" src="{{ c.image }}" alt="{{ c.bakerName }}">
+  <div class="media-body">
+    <app-rating-new [cake]="c"></app-rating-new>
+  </div>
+</div>
+
